@@ -160,8 +160,8 @@ class App extends React.Component<Props> {
                       <a href={article.url}>{article.title}</a>
                       <span> — {article.by}</span>
                       <div className="info">
-                        {article.score} points and comments:{" "}
-                        {article.kids && article.kids.length}
+                        {article.score} points |{" "}
+                        {article.kids ? article.kids.length : 0} comments
                       </div>
                     </div>
                   ))}
