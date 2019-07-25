@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import App from "./app/App";
+import { AppConnected } from "./app/App";
 import { reducers } from "./infra/reducers";
 
 import { createGlobalStyle } from "styled-components";
@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -27,7 +27,7 @@ ReactDOM.render(
   <Provider store={store}>
     <>
       <GlobalStyles />
-      <App />
+      <AppConnected />
     </>
   </Provider>,
   document.getElementById("root")
