@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
+import { articlesReducer } from "../articles/reducers";
+import { Article } from "../articles/actions";
 
-export const reducers = combineReducers({
-  // a silly silly reducer
-  reducer: () => {
-    return false;
-  }
+interface StoreState {
+  articles: Article[];
+}
+export const reducers = combineReducers<StoreState>({
+  articles: articlesReducer
 });
